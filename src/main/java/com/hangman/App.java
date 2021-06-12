@@ -125,12 +125,10 @@ public class App {
 					if(chars[i]==currentguess.charAt(0)) {
 						alreadyFound.add(currentguess);
 						blindword[i] = currentguess;
-						if(!alreadyFound.contains(currentguess)) {
-							found++;
-							notfound = true;
-						}
+						found++;
+						notfound = true;
 						if(found == word.length()) {
-							System.out.println("You won! New game?(yes/no)");
+							System.out.println("You won!");
 							System.out.println(Arrays.deepToString(blindword).replace("[", "").replace(",", " ").replace("]", ""));
 							return true;
 						}
@@ -149,7 +147,7 @@ public class App {
 				  fails++;
 				  printNormalHangmantree(fails);
 				  if(fails == 6) {
-					  System.out.println("END! You lost this game! New game? (yes/no)");
+					  System.out.println("END! You lost this game! The word was: "+ word.toUpperCase());
 					  return true;
 				  }
 			  }
