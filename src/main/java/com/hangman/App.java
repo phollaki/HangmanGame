@@ -150,7 +150,7 @@ public class App {
 				  printNormalHangmantree(fails);
 				  if(fails == 6) {
 					  System.out.println("END! You lost this game! New game? (yes/no)");
-					  return false;
+					  return true;
 				  }
 			  }
 			  else if(fails != 6){
